@@ -1,14 +1,13 @@
-void dfs(vector<int> &A) {
+void dfs(vector<int> a) {
     // 数列の長さが N に達したら打ち切り
-    if (A.size() == N) {
+    if (a.size() == N) {
         // 処理
         return;
     }
 
+    A.push_back(v);
     for (int v = 0; v < M; ++v) {
-        A.push_back(v);
         dfs(A);
-        A.pop_back();
     }
 }
 
