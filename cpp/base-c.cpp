@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 #define repz(i, z, n) for (decltype(n) i = (z); i < (n); i++)
 #define rep(i, n) for (decltype(n) i = 0; i < (n); i++)
+
+#define REPZ(i, z, n) for (decltype(n) i = (z); i <= (n); i++)
+#define REP(i, n) for (decltype(n) i = 0; i <= (n); i++)
 #define ALL(v) v.begin(), v.end()
 #define SIZE(v) ((ll)(v).size())
 #define MAX(v) (*max_element(ALL(v)))
@@ -14,10 +17,13 @@
 #define MP make_pair
 #define READ cin >>
 #define PRINT cout <<
-#define PYES cout << "Yes" << endl;
-#define POK cout << "OK" << endl;
-#define PNO cout << "No" << endl;
-#define PNG cout << "NG" << endl;
+#define PYES cout << "YES" << endl
+#define pyes cout << "Yes" << endl
+#define POK cout << "OK" << endl
+#define PNO cout << "NO" << endl
+#define pno cout << "No" << endl
+#define PNG cout << "NG" << endl
+#define ret return 0
 
 using namespace std;
 
@@ -29,6 +35,23 @@ void debug_out(Head H, Tail... T) {
   debug_out(T...);
 }
 
+template <class T>
+bool chmax(T &a, const T &b) {
+  if (a < b) {
+    a = b;
+    return true;
+  }
+  return false;
+}
+template <class T>
+bool chmin(T &a, const T &b) {
+  if (a > b) {
+    a = b;
+    return true;
+  }
+  return false;
+}
+
 #ifdef _DEBUG
 #define debug(...) debug_out(__VA_ARGS__)
 #else
@@ -38,10 +61,12 @@ void debug_out(Head H, Tail... T) {
 // typedef
 typedef long long ll;
 typedef unsigned long long ul;
+typedef long double ld;
+typedef pair<ll, ll> pl;
 
 // const
 // 円周率
-const double pi = M_PI;
+const ld pi = acos(-1);
 // mod用
 // 1E+9 +7
 const ll mod = (int)1e+9 + 7;
@@ -60,11 +85,13 @@ const ll mod = (int)1e+9 + 7;
 // deep copy v1->v2 copy(v1.begin(), v1.end(), back_inserter(v2) );
 // 大文字65-90(-32)
 // 小文字97-122(+32)
-
-int main() {
+//  priority_queue<pair<ll, ll>, vector<pair<ll, ll>>, greater<pair<ll, ll>>>
+//  ba;
+signed main() {
   // faster
+  // C言語流の入出力は使用できない
   ios::sync_with_stdio(false);
   std::cin.tie(nullptr);
 
-  return 0;
+  ret;
 }
